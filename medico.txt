@@ -1,0 +1,5 @@
+100;alo0;alo0
+101;alo1;alo1
+102;alo2;alo2
+103;alo3;alo3
+104;alo4;alo4
