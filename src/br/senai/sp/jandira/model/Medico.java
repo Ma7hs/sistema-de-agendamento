@@ -100,16 +100,24 @@ public class Medico extends Pessoa {
     public String getMedicoSeparadoPontoVirgula() {
         String codigoEspecialidades = "";
         for(Especialidade e : especialidades){    
-        codigoEspecialidades += e.getCodigo() + ";";
+                   if( e == null){
+                
+            }else{
+                 codigoEspecialidades += e.getCodigo() + ";";
+            }
         }
-        
         return this.codigo + ";" + this.crm + ";" + this.getNome() + ";" + this.getTelefone() + ";" + this.getEmail() + ";" + this.getDataNascimento() + ";" + codigoEspecialidades;
     }
     
      public ArrayList<String> getListaDeEspecialidadesDoMedico() {
         ArrayList<String> dados = new ArrayList<>();
         for (Especialidade e : especialidades) {
-            dados.add(e.getNome());
+            if( e == null){
+                
+            }else{
+                dados.add(e.getNome());
+            }
+            
         }
         DefaultListModel<String> ListaModel = new DefaultListModel<>();
         
